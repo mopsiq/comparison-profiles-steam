@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SteamApi from '../../components/steamApi';
+import { ErrorBoundary } from '../../components/ErrorBoundary';
 
 const steamApiWrapper = new SteamApi('3F58E57C4B88ADCBCFCD824EFC80FCFB');
 
@@ -74,12 +75,12 @@ const ResultsList = ({ data }) => {
 						<br></br>
 						Games count: {item.info['game_count']}
 						<br></br>
-						<img
+						{/* <img
 							width='115px'
 							height='115px'
 							src={item.info.avatarfull}
 							alt='avatar'
-						></img>
+						></img> */}
 						<br></br>
 					</li>
 				))}
@@ -139,7 +140,9 @@ function Home() {
 				change={profiles.setURL}
 			/>
 			<button onClick={() => profiles.getInfo()}>Get</button>
-			<CompareBlock data={profiles.state} loader={isLoaded} />
+			<ErrorBoundary>
+				<CompareBlock data={profiles.state} loader={isLoaded} />
+			</ErrorBoundary>
 		</div>
 	);
 }

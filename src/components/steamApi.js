@@ -39,7 +39,6 @@ class SteamApi {
 	}
 
 	async getLibraryGames(steamid) {
-		console.log(steamid);
 		const result = await this._sendRequest({
 			generalInterface: 'IPlayerService',
 			method: 'GetOwnedGames',
@@ -53,6 +52,12 @@ class SteamApi {
 		const request = await fetch(
 			`http://api.steampowered.com/${generalInterface}/${method}/${version}/${query}`
 		);
+		if (!request.ok) {
+			console.error(request);
+			console.log(request.statusText);
+			console.log(request.status);
+			// throw new Error('Bad request');
+		}
 		const responseInJSON = await request.json();
 		const result = await responseInJSON;
 		return result;
