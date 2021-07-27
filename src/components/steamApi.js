@@ -54,7 +54,7 @@ class SteamApi {
 	async _sendRequest({ generalInterface, method, version, query }) {
 		try {
 			const request = await fetch(
-				`http://api.steampowered.com/${generalInterface}/${method}/${version}/${query}`
+				`https://api.steampowered.com/${generalInterface}/${method}/${version}/${query}`
 			);
 			if (!request.ok) {
 				throw new Error(`HTTP error! status: ${request.status}`);
