@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/comparison-profiles-steam/static/js/main.49574c5c.chunk.js",
-    "main.js.map": "/comparison-profiles-steam/static/js/main.49574c5c.chunk.js.map",
+    "main.js": "/comparison-profiles-steam/static/js/main.9c3ab58b.chunk.js",
+    "main.js.map": "/comparison-profiles-steam/static/js/main.9c3ab58b.chunk.js.map",
     "runtime-main.js": "/comparison-profiles-steam/static/js/runtime-main.2df3eb33.js",
     "runtime-main.js.map": "/comparison-profiles-steam/static/js/runtime-main.2df3eb33.js.map",
     "static/js/2.812f6a78.chunk.js": "/comparison-profiles-steam/static/js/2.812f6a78.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.2df3eb33.js",
     "static/js/2.812f6a78.chunk.js",
-    "static/js/main.49574c5c.chunk.js"
+    "static/js/main.9c3ab58b.chunk.js"
   ]
 }
